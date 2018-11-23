@@ -1,13 +1,13 @@
 package com.github.xufengtian14.badwiki.entity;
 
-public class SpacePerm {
+public class LoginType {
     private Integer id;
 
     private String name;
 
     private String note;
 
-    private Integer spaceAreaId;
+    private Boolean enabled;
 
     public Integer getId() {
         return id;
@@ -33,11 +33,11 @@ public class SpacePerm {
         this.note = note;
     }
 
-    public Integer getSpaceAreaId() {
-        return spaceAreaId;
+    public Boolean getEnabled() {
+        return enabled;
     }
 
-    public void setSpaceAreaId(Integer spaceAreaId) {
-        this.spaceAreaId = spaceAreaId;
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
 }

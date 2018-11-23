@@ -1,4 +1,6 @@
 package com.github.xufengtian14.badwiki.service.impl;
 
-public class UserServiceImpl {
+import com.github.xufengtian14.badwiki.service.IUserService;
+
+public class UserServiceImpl implements IUserService {
 }

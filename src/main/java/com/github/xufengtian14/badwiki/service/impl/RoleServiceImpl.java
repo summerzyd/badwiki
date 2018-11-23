@@ -1,4 +1,6 @@
 package com.github.xufengtian14.badwiki.service.impl;
 
-public class RoleServiceImpl {
+import com.github.xufengtian14.badwiki.service.IRoleService;
+
+public class RoleServiceImpl implements IRoleService {
 }

@@ -1,4 +1,6 @@
 package com.github.xufengtian14.badwiki.service.impl;
 
-public class SpaceServiceImpl {
+import com.github.xufengtian14.badwiki.service.ISpaceService;
+
+public class SpaceServiceImpl implements ISpaceService {
 }

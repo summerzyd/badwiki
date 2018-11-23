@@ -1,4 +1,6 @@
 package com.github.xufengtian14.badwiki.service.impl;
 
-public class DocServiceImpl {
+import com.github.xufengtian14.badwiki.service.IDocService;
+
+public class DocServiceImpl implements IDocService{
 }

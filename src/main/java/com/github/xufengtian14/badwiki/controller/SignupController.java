@@ -37,7 +37,7 @@ public class SignupController {
      * 激活用户
      * @return
      */
-    @RequestMapping(value = "", method = RequestMethod.POST)
+    @RequestMapping(value = "/active", method = RequestMethod.POST)
     @ResponseBody
     public ObjectRestResponse activeUser(){
         ObjectRestResponse<String> response = new ObjectRestResponse<>();

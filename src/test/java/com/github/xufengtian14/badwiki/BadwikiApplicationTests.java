@@ -1,4 +1,4 @@
-package com.github.badwiki.badwiki;
+package com.github.xufengtian14.badwiki;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

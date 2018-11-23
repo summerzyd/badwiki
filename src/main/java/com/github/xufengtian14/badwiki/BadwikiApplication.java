@@ -1,4 +1,4 @@
-package com.github.badwiki.badwiki;
+package com.github.xufengtian14.badwiki;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

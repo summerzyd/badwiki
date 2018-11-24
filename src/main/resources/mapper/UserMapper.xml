@@ -18,4 +18,31 @@
         where id = #{id};
     </select>
 
+    <update id="updateUserById">
+        update user
+        set
+        <if test="name != null and name != ''">
+          name = #{name},
+        </if>
+        <if test="email != null and email != ''">
+          email = #{email},
+        </if>
+        <if test="password != null and password != ''">
+          password = #{password},
+        </if>
+        <if test="loginTypeId != null">
+            login_type_id = #{loginTypeId},
+        </if>
+        <if test="actived != null">
+            actived = #{actived},
+        </if>
+        <if test="enabled != null">
+            enabled = #{enabled},
+        </if>
+        <if test="deleted != null">
+            deleted = #{deleted},
+        </if>
+        id = #{id}
+        where id = #{id}
+    </update>
 </mapper>

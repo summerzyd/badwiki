@@ -26,7 +26,11 @@ public class UserController {
     public ObjectRestResponse userInfo(){
         ObjectRestResponse<User> response = new ObjectRestResponse<>();
 
-        User user = userService.seleteUserById(1);
+//        User user = userService.seleteUserById(1);
+        User user = new User();
+        user.setId(1);
+        user.setPassword("xufengtian");
+        Integer updateRows = userService.updateUserById(user);
         response.setData(user);
         return response;
     }

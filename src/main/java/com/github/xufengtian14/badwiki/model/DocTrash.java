@@ -9,7 +9,7 @@ public class DocTrash {
 
     private Integer docId;
 
-    private String[] docPath;
+    private String docPath;
 
     private Integer deleter;
 
@@ -39,11 +39,11 @@ public class DocTrash {
         this.docId = docId;
     }
 
-    public String[] getDocPath() {
+    public String getDocPath() {
         return docPath;
     }
 
-    public void setDocPath(String[] docPath) {
+    public void setDocPath(String docPath) {
         this.docPath = docPath;
     }
 

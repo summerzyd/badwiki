@@ -2,7 +2,7 @@ package com.github.xufengtian14.badwiki.mapper;
 
 import com.github.xufengtian14.badwiki.model.Role;
 
-public interface RoleMapper {
+public interface IRoleMapper {
     Role seleteRoleById(Integer id);
 
 //    void updateRole(Role role);

@@ -2,7 +2,7 @@ package com.github.xufengtian14.badwiki.mapper;
 
 import com.github.xufengtian14.badwiki.model.DocContent;
 
-public interface DocContentMapper  {
+public interface IDocContentMapper {
 
     DocContent seleteDocContentByDocId(Integer doc_id);
 

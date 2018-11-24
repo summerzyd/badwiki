@@ -1,5 +1,8 @@
 package com.github.xufengtian14.badwiki.controller;
 
+import com.github.xufengtian14.badwiki.model.User;
+import com.github.xufengtian14.badwiki.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,6 +13,10 @@ import com.github.xufengtian14.badwiki.common.response.ObjectRestResponse;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+    @Autowired
+    IUserService userService;
+
     /**
      * 获取用户自身信息
      * @return
@@ -17,8 +24,10 @@ public class UserController {
     @RequestMapping(value = "/info", method = RequestMethod.GET)
     @ResponseBody
     public ObjectRestResponse userInfo(){
-        ObjectRestResponse<String> response = new ObjectRestResponse<>();
-        response.setData("hello world");
+        ObjectRestResponse<User> response = new ObjectRestResponse<>();
+
+        User user = userService.seleteUserById(1);
+        response.setData(user);
         return response;
     }
 

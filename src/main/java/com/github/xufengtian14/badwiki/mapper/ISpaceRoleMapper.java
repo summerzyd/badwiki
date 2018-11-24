@@ -1,5 +1,4 @@
 package com.github.xufengtian14.badwiki.mapper;
 
-public interface DocOperationTypeMapper {
-
+public interface ISpaceRoleMapper {
 }

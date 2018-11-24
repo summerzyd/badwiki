@@ -1,10 +1,11 @@
 package com.github.xufengtian14.badwiki.mapper;
 
 import com.github.xufengtian14.badwiki.model.User;
+import org.apache.ibatis.annotations.Param;
 
-public interface UserMapper {
+public interface IUserMapper {
 
-    User seleteUserNyId(Integer id);
+    User seleteUserById(@Param("id") Integer id);
 
 //    void updateUser(User user);
 //

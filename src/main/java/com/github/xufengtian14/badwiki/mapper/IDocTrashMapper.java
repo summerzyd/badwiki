@@ -4,7 +4,7 @@ import com.github.xufengtian14.badwiki.model.DocTrash;
 
 import java.util.List;
 
-public interface DocTrashMapper {
+public interface IDocTrashMapper {
     List<DocTrash> seleteDocTrashBySpaceId(Integer space_id);
 
 //    DocTrash insertDocTrash(DocTrash doc_trash);

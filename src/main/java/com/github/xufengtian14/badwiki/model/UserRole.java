@@ -1,4 +1,4 @@
-package com.github.xufengtian14.badwiki.entity;
+package com.github.xufengtian14.badwiki.model;
 
 public class UserRole {
     private Integer id;

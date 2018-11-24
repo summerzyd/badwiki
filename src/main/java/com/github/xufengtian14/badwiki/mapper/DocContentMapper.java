@@ -1,6 +1,6 @@
 package com.github.xufengtian14.badwiki.mapper;
 
-import com.github.xufengtian14.badwiki.entity.DocContent;
+import com.github.xufengtian14.badwiki.model.DocContent;
 
 public interface DocContentMapper  {
 

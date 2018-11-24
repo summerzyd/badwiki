@@ -1,4 +1,4 @@
-package com.github.xufengtian14.badwiki.entity;
+package com.github.xufengtian14.badwiki.model;
 
 import java.math.BigInteger;
 
@@ -17,7 +17,7 @@ public class Doc {
 
     private Integer editor;
 
-    private BigInteger editeTime;
+    private BigInteger editTime;
 
     private Boolean deleted;
 
@@ -85,12 +85,12 @@ public class Doc {
         this.editor = editor;
     }
 
-    public BigInteger getEditeTime() {
-        return editeTime;
+    public BigInteger getEditTime() {
+        return editTime;
     }
 
-    public void setEditeTime(BigInteger editeTime) {
-        this.editeTime = editeTime;
+    public void setEditTime(BigInteger editeTime) {
+        this.editTime = editeTime;
     }
 
     public Boolean getDeleted() {

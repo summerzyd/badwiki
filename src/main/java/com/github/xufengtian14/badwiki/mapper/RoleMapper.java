@@ -1,6 +1,6 @@
 package com.github.xufengtian14.badwiki.mapper;
 
-import com.github.xufengtian14.badwiki.entity.Role;
+import com.github.xufengtian14.badwiki.model.Role;
 
 public interface RoleMapper {
     Role seleteRoleById(Integer id);

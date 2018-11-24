@@ -1,6 +1,6 @@
 package com.github.xufengtian14.badwiki.mapper;
 
-import com.github.xufengtian14.badwiki.entity.User;
+import com.github.xufengtian14.badwiki.model.User;
 
 public interface UserMapper {
 

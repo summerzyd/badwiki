@@ -1,13 +1,11 @@
-package com.github.xufengtian14.badwiki.entity;
+package com.github.xufengtian14.badwiki.model;
 
-public class Space {
+public class DocOperationType {
     private Integer id;
 
     private String name;
 
     private String note;
-
-    private Boolean enabled;
 
     public Integer getId() {
         return id;
@@ -31,13 +29,5 @@ public class Space {
 
     public void setNote(String note) {
         this.note = note;
-    }
-
-    public Boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
     }
 }

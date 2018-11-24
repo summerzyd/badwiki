@@ -1,11 +1,13 @@
-package com.github.xufengtian14.badwiki.entity;
+package com.github.xufengtian14.badwiki.model;
 
-public class SpaceArea {
+public class SpacePerm {
     private Integer id;
 
     private String name;
 
     private String note;
+
+    private Integer spaceAreaId;
 
     public Integer getId() {
         return id;
@@ -29,5 +31,13 @@ public class SpaceArea {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public Integer getSpaceAreaId() {
+        return spaceAreaId;
+    }
+
+    public void setSpaceAreaId(Integer spaceAreaId) {
+        this.spaceAreaId = spaceAreaId;
     }
 }

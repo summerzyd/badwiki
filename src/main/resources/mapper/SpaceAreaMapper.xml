@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.xufengtian14.badwiki.mapper.SpaceMapper">
+
+    <resultMap id="docMap" type="com.github.xufengtian14.badwiki.model.Space">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="note" column="note"></result>
+    </resultMap>
+
+</mapper>

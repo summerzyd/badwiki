@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.xufengtian14.badwiki.mapper.DocHistoryMapper">
+
+    <resultMap id="docMap" type="com.github.xufengtian14.badwiki.model.DocHistory">
+        <id property="id" column="id"></id>
+        <result property="spaceId" column="space_id"></result>
+        <result property="docId" column="doc_id"></result>
+        <result property="docOperationTypeId" column="doc_operation_type_id"></result>
+        <result property="operator" column="operator"></result>
+        <result property="operateTime" column="operate_time"></result>
+    </resultMap>
+
+</mapper>

@@ -1,13 +1,13 @@
-package com.github.xufengtian14.badwiki.entity;
+package com.github.xufengtian14.badwiki.model;
 
-public class Role {
+public class LoginType {
     private Integer id;
 
     private String name;
 
     private String note;
 
-    private Boolean deleted;
+    private Boolean enabled;
 
     public Integer getId() {
         return id;
@@ -33,11 +33,11 @@ public class Role {
         this.note = note;
     }
 
-    public Boolean getDeleted() {
-        return deleted;
+    public Boolean getEnabled() {
+        return enabled;
     }
 
-    public void setDeleted(Boolean deleted) {
-        this.deleted = deleted;
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
 }

@@ -1,4 +1,4 @@
-package com.github.xufengtian14.badwiki.entity;
+package com.github.xufengtian14.badwiki.model;
 
 public class User {
     private Integer id;
@@ -9,7 +9,7 @@ public class User {
 
     private String password;
 
-    private Integer login_type_id;
+    private Integer loginTypeId;
 
     private Boolean actived;
 
@@ -49,12 +49,12 @@ public class User {
         this.password = password;
     }
 
-    public Integer getLogin_type_id() {
-        return login_type_id;
+    public Integer getLoginTypeId() {
+        return loginTypeId;
     }
 
-    public void setLogin_type_id(Integer login_type_id) {
-        this.login_type_id = login_type_id;
+    public void setLoginTypeId(Integer loginTypeId) {
+        this.loginTypeId = loginTypeId;
     }
 
     public Boolean getActived() {

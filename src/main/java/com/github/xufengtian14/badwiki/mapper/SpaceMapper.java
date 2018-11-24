@@ -1,6 +1,6 @@
 package com.github.xufengtian14.badwiki.mapper;
 
-import com.github.xufengtian14.badwiki.entity.Space;
+import com.github.xufengtian14.badwiki.model.Space;
 
 import java.util.List;
 

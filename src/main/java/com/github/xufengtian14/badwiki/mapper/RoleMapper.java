@@ -5,9 +5,9 @@ import com.github.xufengtian14.badwiki.model.Role;
 public interface RoleMapper {
     Role seleteRoleById(Integer id);
 
-    void updateRole(Role role);
-
-    Role insertRole(Role role);
-
-    void deleteRoleById(Integer id);
+//    void updateRole(Role role);
+//
+//    Role insertRole(Role role);
+//
+//    void deleteRoleById(Integer id);
 }

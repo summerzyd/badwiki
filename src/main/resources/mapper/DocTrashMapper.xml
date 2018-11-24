@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.github.xufengtian14.badwiki.mapper.DocTrashMapper">
 
-    <resultMap id="docMap" type="com.github.xufengtian14.badwiki.model.DocTrash">
+    <resultMap id="docTrashMap" type="com.github.xufengtian14.badwiki.model.DocTrash">
         <id property="id" column="id"></id>
         <result property="spaceId" column="space_id"></result>
         <result property="docId" column="doc_id"></result>
@@ -10,5 +10,10 @@
         <result property="deleter" column="deleter"></result>
         <result property="deleteTime" column="delete_time"></result>
     </resultMap>
+
+    <select id="seleteDocTrashBySpaceId" resultMap="docTrashMap">
+        SELECT * from doc_trash
+        where space_id = #{space_id};
+    </select>
 
 </mapper>

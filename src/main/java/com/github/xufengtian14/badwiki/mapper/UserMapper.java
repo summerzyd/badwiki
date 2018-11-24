@@ -6,9 +6,9 @@ public interface UserMapper {
 
     User seleteUserNyId(Integer id);
 
-    void updateUser(User user);
-
-    User insertUser(User user);
-
-    void deleteUserById(Integer id);
+//    void updateUser(User user);
+//
+//    User insertUser(User user);
+//
+//    void deleteUserById(Integer id);
 }

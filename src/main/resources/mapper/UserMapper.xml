@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.github.xufengtian14.badwiki.mapper.UserMapper">
 
-    <resultMap id="docMap" type="com.github.xufengtian14.badwiki.model.User">
+    <resultMap id="userMap" type="com.github.xufengtian14.badwiki.model.User">
         <id property="id" column="id"></id>
         <result property="name" column="name"></result>
         <result property="email" column="email"></result>
@@ -12,5 +12,10 @@
         <result property="enabled" column="enabled"></result>
         <result property="deleted" column="deleted"></result>
     </resultMap>
+
+    <select id="seleteUserNyId" resultMap="userMap">
+        SELECT * from user
+        where id = #{id};
+    </select>
 
 </mapper>

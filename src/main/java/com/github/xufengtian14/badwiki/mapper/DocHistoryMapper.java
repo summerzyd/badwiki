@@ -7,5 +7,5 @@ import java.util.List;
 public interface DocHistoryMapper {
     List<DocHistory> seleteDocHistory();
 
-    DocHistory insertDocHistory(DocHistory doc_history);
+//    DocHistory insertDocHistory(DocHistory doc_history);
 }

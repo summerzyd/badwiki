@@ -2,11 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.github.xufengtian14.badwiki.mapper.SpaceAreaMapper">
 
-    <resultMap id="docMap" type="com.github.xufengtian14.badwiki.model.SpaceArea">
+    <resultMap id="spaceMap" type="com.github.xufengtian14.badwiki.model.SpaceArea">
         <id property="id" column="id"></id>
         <result property="name" column="name"></result>
         <result property="note" column="note"></result>
         <result property="enabled" column="enabled"></result>
     </resultMap>
+
+    <select id="seleteSpace" resultMap="spaceMap">
+        SELECT * from space;
+    </select>
 
 </mapper>

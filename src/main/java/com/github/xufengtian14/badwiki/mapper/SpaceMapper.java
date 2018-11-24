@@ -7,7 +7,7 @@ import java.util.List;
 public interface SpaceMapper {
     List<Space> seleteSpace();
 
-    Space insertSpace(Space space);
-
-    void deleteSpaceById(Integer id);
+//    Space insertSpace(Space space);
+//
+//    void deleteSpaceById(Integer id);
 }

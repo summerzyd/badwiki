@@ -25,20 +25,7 @@ public class UserController {
     @ResponseBody
     public ObjectRestResponse userInfo(){
         ObjectRestResponse<User> response = new ObjectRestResponse<>();
-//        User user = userService.seleteUserById(1);
-//        User user = new User(null,"caizehua","zehua,cai@e-dewin.com", "caizehua", 0, true, true, false);
-//        user.setId(1);
-//        user.setName("huxiaowei");
-//        user.setEmail("xiaowei.hu@e-dewin.com");
-//        user.setPassword("xiaowei");
-//        user.setLoginTypeId(0);
-//        user.setActived(true);
-//        user.setEnabled(true);
-//        user.setDeleted(false);
-//        user.setPassword("xufengtian");
-//        Integer updateRows = userService.updateUserById(user);
-//        Integer insertedRow = userService.insertUser(user);
-        User user = new User();
+        User user = userService.seleteUserById(1);
         response.setData(user);
         return response;
     }
@@ -51,7 +38,9 @@ public class UserController {
     @ResponseBody
     public ObjectRestResponse userPassword(){
         ObjectRestResponse<String> response = new ObjectRestResponse<>();
-        response.setData("hello world");
+        User user = userService.seleteUserById(1);
+        // user.setPassword("xxxx")
+        userService.updateUserById(user);
         return response;
     }
 

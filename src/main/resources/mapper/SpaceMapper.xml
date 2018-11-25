@@ -6,7 +6,6 @@
         <id property="id" column="id"></id>
         <result property="name" column="name"></result>
         <result property="note" column="note"></result>
-        <result property="enabled" column="enabled"></result>
     </resultMap>
 
     <select id="seleteSpace" resultMap="spaceMap">
@@ -27,21 +26,29 @@
         <if test="note != null and note != ''">
             note = #{note},
         </if>
-        <if test="enabled != null">
-            enabled = #{enabled},
-        </if>
         id = #{id}
         where id = #{id}
     </update>
 
     <insert id="insertSpace" useGeneratedKeys="true" keyProperty="id">
-        insert role (name, note, enabled)
-        values ( #{name}, #{note}, #{enabled} )
+        insert role (name, note)
+        values ( #{name}, #{note} )
     </insert>
 
     <delete id="deleteSpaceById">
         delete from space
         where id = #{id}
     </delete>
+
+    <select id="selectSpaceByUserIdAndSpacePermId" resultMap="spaceMap">
+        SELECT space.* from space
+        inner join space_role on space_role.space_id = space.id
+        inner join role on role.id = space_role.role_id
+        inner join user_role on user_role.role_id = role.id
+        inner join user on user.id = user_role.user_id
+        where user.id = #{user_id} and user.deleted = false
+          and user_role.deleted = false and role.deleted = false
+          and space_role.space_perm_id = #{space_perm_id} and space_role.deleted = false
+    </select>
 
 </mapper>

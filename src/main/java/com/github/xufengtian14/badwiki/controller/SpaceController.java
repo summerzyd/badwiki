@@ -1,5 +1,12 @@
 package com.github.xufengtian14.badwiki.controller;
 
+import com.github.xufengtian14.badwiki.model.Role;
+import com.github.xufengtian14.badwiki.model.Space;
+import com.github.xufengtian14.badwiki.model.User;
+import com.github.xufengtian14.badwiki.service.IRoleService;
+import com.github.xufengtian14.badwiki.service.ISpaceService;
+import com.github.xufengtian14.badwiki.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,20 +16,32 @@ import com.github.xufengtian14.badwiki.common.response.ObjectRestResponse;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
 import java.util.Map;
 
 @Controller
 @RequestMapping("/space")
 public class SpaceController {
+    @Autowired
+    IUserService userService;
+
+    @Autowired
+    IRoleService roleService;
+
+    @Autowired
+    ISpaceService spaceService;
     /**
-     * 获取文档空间列表
+     * 获取用户有权限查看的文档空间列表
+     * 1. 获取用户角色列表
+     * 2.
      * @return
      */
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
     public ObjectRestResponse spaceGetList(){
-        ObjectRestResponse<String> response = new ObjectRestResponse<>();
-        response.setData("Hello World");
+        ObjectRestResponse<List> response = new ObjectRestResponse<>();
+//        List<Space> spaces = spaceService.selectSpaceByUserId(Integer user_id);
+//        response.setData(spaces);
         return response;
     }
 

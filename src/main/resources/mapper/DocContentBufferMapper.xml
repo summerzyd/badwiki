@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.github.xufengtian14.badwiki.mapper.IDocContentMapper">
+<mapper namespace="com.github.xufengtian14.badwiki.mapper.IDocContentBufferMapper">
 
-    <resultMap id="docContentMap" type="com.github.xufengtian14.badwiki.model.DocContent">
+    <resultMap id="docContentBufferMap" type="com.github.xufengtian14.badwiki.model.DocContentBuffer">
         <id property="id" column="id"></id>
         <result property="docId" column="doc_id"></result>
         <result property="saver" column="saver"></result>
@@ -11,7 +11,7 @@
         <result property="docContent" column="doc_content"></result>
     </resultMap>
 
-    <select id="seleteDocContentBufferByDocId" resultMap="docContentMap">
+    <select id="seleteDocContentBufferByDocId" resultMap="docContentBufferMap">
         SELECT *
         from doc_content
         where doc_id = #{doc_id}

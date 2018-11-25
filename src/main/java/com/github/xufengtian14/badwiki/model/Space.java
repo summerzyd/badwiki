@@ -7,16 +7,13 @@ public class Space {
 
     private String note;
 
-    private Boolean enabled;
-
     public Space() {
     }
 
-    public Space(Integer id, String name, String note, Boolean enabled) {
+    public Space(Integer id, String name, String note) {
         this.id = id;
         this.name = name;
         this.note = note;
-        this.enabled = enabled;
     }
 
     public Integer getId() {
@@ -41,13 +38,5 @@ public class Space {
 
     public void setNote(String note) {
         this.note = note;
-    }
-
-    public Boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
     }
 }

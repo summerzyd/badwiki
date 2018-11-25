@@ -15,4 +15,5 @@ public interface ISpaceMapper {
     Integer insertSpace(Space space);
 
     Integer deleteSpaceById(@Param("id") Integer id);
+
 }

@@ -11,7 +11,7 @@ public class User {
 
     private Integer loginTypeId;
 
-    private Boolean actived;
+    private Boolean activated;
 
     private Boolean enabled;
 
@@ -20,13 +20,13 @@ public class User {
     public User() {
     }
 
-    public User(Integer id, String name, String email, String password, Integer loginTypeId, Boolean actived, Boolean enabled, Boolean deleted) {
+    public User(Integer id, String name, String email, String password, Integer loginTypeId, Boolean activated, Boolean enabled, Boolean deleted) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
         this.loginTypeId = loginTypeId;
-        this.actived = actived;
+        this.activated = activated;
         this.enabled = enabled;
         this.deleted = deleted;
     }
@@ -71,12 +71,12 @@ public class User {
         this.loginTypeId = loginTypeId;
     }
 
-    public Boolean getActived() {
-        return actived;
+    public Boolean getActivated() {
+        return activated;
     }
 
-    public void setActived(Boolean actived) {
-        this.actived = actived;
+    public void setActivated(Boolean activated) {
+        this.activated = activated;
     }
 
     public Boolean getEnabled() {

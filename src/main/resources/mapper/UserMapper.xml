@@ -8,7 +8,7 @@
         <result property="email" column="email"></result>
         <result property="password" column="password"></result>
         <result property="loginTypeId" column="login_type_id"></result>
-        <result property="actived" column="actived"></result>
+        <result property="activated" column="activated"></result>
         <result property="enabled" column="enabled"></result>
         <result property="deleted" column="deleted"></result>
     </resultMap>
@@ -33,8 +33,8 @@
         <if test="loginTypeId != null">
             login_type_id = #{loginTypeId},
         </if>
-        <if test="actived != null">
-            actived = #{actived},
+        <if test="activated != null">
+            activated = #{activated},
         </if>
         <if test="enabled != null">
             enabled = #{enabled},
@@ -47,8 +47,8 @@
     </update>
 
     <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
-        insert user (name, email, password, login_type_id, actived, enabled, deleted)
-        values ( #{name}, #{email}, #{password}, #{loginTypeId}, #{actived}, #{enabled}, #{deleted} )
+        insert user (name, email, password, login_type_id, activated, enabled, deleted)
+        values ( #{name}, #{email}, #{password}, #{loginTypeId}, #{activated}, #{enabled}, #{deleted} )
     </insert>
 
     <update id="deleteUserById">

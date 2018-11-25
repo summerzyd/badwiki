@@ -40,15 +40,28 @@
         where id = #{id}
     </delete>
 
-    <select id="selectSpaceByUserIdAndSpacePermId" resultMap="spaceMap">
+    <!--通过文档空间ID、用户ID 和 文档权限ID列表 获取用户有权限的文档空间列表-->
+    <select id="selectSpaceBySpaceIdAndUserIdAndSpacePermIdList" resultMap="spaceMap">
         SELECT space.* from space
         inner join space_role on space_role.space_id = space.id
         inner join role on role.id = space_role.role_id
         inner join user_role on user_role.role_id = role.id
         inner join user on user.id = user_role.user_id
-        where user.id = #{user_id} and user.deleted = false
-          and user_role.deleted = false and role.deleted = false
-          and space_role.space_perm_id = #{space_perm_id} and space_role.deleted = false
+        where
+          1 = 1
+          <if test="space_id != null">
+              and space.id = #{space_id}
+          </if>
+          <if test="user_id != null">
+              and user.id = #{user_id}
+          </if>
+          and user.deleted = false
+          and user_role.deleted = false
+          and role.deleted = false
+          <if test="space_perm_id_list != null">
+              and space_role.space_perm_id in <foreach collection="space_perm_id_list" open ="(" close =")" separator ="," item="id" index="i"> #{id} </foreach>
+          </if>
+          and space_role.deleted = false
     </select>
 
 </mapper>

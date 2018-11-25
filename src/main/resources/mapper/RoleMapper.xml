@@ -14,4 +14,28 @@
         where id = #{id};
     </select>
 
+    <update id="updateRoleById">
+        update role
+        set
+        <if test="name != null and name != ''">
+          name = #{name},
+        </if>
+        <if test="note != null and note != ''">
+          note = #{note},
+        </if>
+        <if test="deleted != null">
+          deleted = #{deleted},
+        </if>
+        id = #{id}
+        where id = #{id}
+    </update>
+
+    <insert id="insertRole" useGeneratedKeys="true" keyProperty="id">
+        insert role (name, note, deleted)
+        values ( #{name}, #{note}, #{deleted} )
+    </insert>
+
+    <update id="deleteRoleById">
+        update role set deleted = true where id = #{id}
+    </update>
 </mapper>

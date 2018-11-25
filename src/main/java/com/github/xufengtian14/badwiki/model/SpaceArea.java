@@ -7,6 +7,15 @@ public class SpaceArea {
 
     private String note;
 
+    public SpaceArea() {
+    }
+
+    public SpaceArea(Integer id, String name, String note) {
+        this.id = id;
+        this.name = name;
+        this.note = note;
+    }
+
     public Integer getId() {
         return id;
     }

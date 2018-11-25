@@ -17,4 +17,9 @@
         limit 0,10;
     </select>
 
+    <insert id="insertDocHistory" useGeneratedKeys="true" keyProperty="id">
+        insert doc_history ( space_id, doc_id, doc_operation_type_id, operator, operate_time)
+        values ( #{spaceId}, #{docId}, #{doc_operationTypeId}, #{operator}, #{operateTime})
+    </insert>
+
 </mapper>

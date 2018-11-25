@@ -9,6 +9,16 @@ public class SpacePerm {
 
     private Integer spaceAreaId;
 
+    public SpacePerm() {
+    }
+
+    public SpacePerm(Integer id, String name, String note, Integer spaceAreaId) {
+        this.id = id;
+        this.name = name;
+        this.note = note;
+        this.spaceAreaId = spaceAreaId;
+    }
+
     public Integer getId() {
         return id;
     }

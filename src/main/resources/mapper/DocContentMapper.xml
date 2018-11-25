@@ -12,7 +12,29 @@
     <select id="seleteDocContentByDocId" resultMap="docContentMap">
         SELECT *
         from doc_content
-        where doc_id = #{doc_id};
+        where doc_id = #{doc_id}
     </select>
 
+    <update id="updateDocContentByDocId">
+        update doc_content
+        set
+        <if test="docName != null and docName != ''">
+            doc_name = #{docName}
+        </if>
+        <if test="docContent != null and docContent != ''">
+            doc_content = #{docContent}
+        </if>
+        doc_id = #{docId}
+        where doc_id = #{docId}
+    </update>
+
+    <insert id="insertDocContent" useGeneratedKeys="true" keyProperty="id">
+        insert doc_content ( doc_id, doc_name, doc_content )
+        values ( #{docId}, #{docName}, #{docContent} )
+    </insert>
+
+    <delete id="deleteDocContentByDocId">
+        delete from doc_content
+        where doc_id = #{doc_id}
+    </delete>
 </mapper>

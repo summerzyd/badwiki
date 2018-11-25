@@ -9,6 +9,16 @@ public class LoginType {
 
     private Boolean enabled;
 
+    public LoginType() {
+    }
+
+    public LoginType(Integer id, String name, String note, Boolean enabled) {
+        this.id = id;
+        this.name = name;
+        this.note = note;
+        this.enabled = enabled;
+    }
+
     public Integer getId() {
         return id;
     }

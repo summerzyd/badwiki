@@ -9,9 +9,8 @@
         <result property="spaceAreaId" column="space_area_id"></result>
     </resultMap>
 
-    <select id="selectSpacePermBySpaceIdAndRoleId" resultMap="spacePermMap">
-        SELECT * from space_perm
-        where space_id = #{space_id} and role_id = #{role_id};
+    <select id="selectSpacePerm" resultMap="spacePermMap">
+        select * from space_perm
     </select>
 
 </mapper>

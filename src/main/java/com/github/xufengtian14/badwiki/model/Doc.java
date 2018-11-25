@@ -29,6 +29,25 @@ public class Doc {
 
     private BigInteger modifyTime;
 
+    public Doc() {
+    }
+
+    public Doc(Integer id, Integer spaceId, String name, Integer size, Integer parentId, Boolean hasChild, Integer editor, BigInteger editTime, Boolean deleted, Integer creator, BigInteger createTime, Integer modifier, BigInteger modifyTime) {
+        this.id = id;
+        this.spaceId = spaceId;
+        this.name = name;
+        this.size = size;
+        this.parentId = parentId;
+        this.hasChild = hasChild;
+        this.editor = editor;
+        this.editTime = editTime;
+        this.deleted = deleted;
+        this.creator = creator;
+        this.createTime = createTime;
+        this.modifier = modifier;
+        this.modifyTime = modifyTime;
+    }
+
     public Integer getId() {
         return id;
     }

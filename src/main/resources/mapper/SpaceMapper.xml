@@ -10,7 +10,38 @@
     </resultMap>
 
     <select id="seleteSpace" resultMap="spaceMap">
-        SELECT * from space;
+        SELECT * from space
     </select>
+
+    <select id="seleteSpaceById" resultMap="spaceMap">
+        SELECT * from space
+        where id = #{id}
+    </select>
+
+    <update id="updateSpaceById">
+        update space
+        set
+        <if test="name != null and name != ''">
+            name = #{name},
+        </if>
+        <if test="note != null and note != ''">
+            note = #{note},
+        </if>
+        <if test="enabled != null">
+            enabled = #{enabled},
+        </if>
+        id = #{id}
+        where id = #{id}
+    </update>
+
+    <insert id="insertSpace" useGeneratedKeys="true" keyProperty="id">
+        insert role (name, note, enabled)
+        values ( #{name}, #{note}, #{enabled} )
+    </insert>
+
+    <delete id="deleteSpaceById">
+        delete from space
+        where id = #{id}
+    </delete>
 
 </mapper>

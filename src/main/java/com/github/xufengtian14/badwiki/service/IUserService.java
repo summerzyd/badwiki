@@ -7,4 +7,8 @@ public interface IUserService {
     User seleteUserById(Integer id);
 
     Integer updateUserById(User user);
+
+    Integer insertUser(User user);
+
+    Integer deleteUserById(Integer id);
 }

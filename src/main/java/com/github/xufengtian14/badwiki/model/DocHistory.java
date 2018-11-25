@@ -15,6 +15,18 @@ public class DocHistory {
 
     private BigInteger operateTime;
 
+    public DocHistory() {
+    }
+
+    public DocHistory(Integer id, Integer spaceId, Integer docId, Integer docOperationTypeId, Integer operator, BigInteger operateTime) {
+        this.id = id;
+        this.spaceId = spaceId;
+        this.docId = docId;
+        this.docOperationTypeId = docOperationTypeId;
+        this.operator = operator;
+        this.operateTime = operateTime;
+    }
+
     public Integer getId() {
         return id;
     }

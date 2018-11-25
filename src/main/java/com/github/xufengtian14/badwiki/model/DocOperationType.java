@@ -7,6 +7,15 @@ public class DocOperationType {
 
     private String note;
 
+    public DocOperationType() {
+    }
+
+    public DocOperationType(Integer id, String name, String note) {
+        this.id = id;
+        this.name = name;
+        this.note = note;
+    }
+
     public Integer getId() {
         return id;
     }

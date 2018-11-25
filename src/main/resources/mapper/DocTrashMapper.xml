@@ -16,4 +16,13 @@
         where space_id = #{space_id};
     </select>
 
+    <insert id="insertDocTrash">
+        insert doc_trash(space_id, doc_id, doc_path, deleter, delete_time)
+        values (#{spaceId}, #{docId}, #{docPath}, #{deleter}, #{deleteTime})
+    </insert>
+
+    <delete id="deleteDocTrashById">
+        delete from doc_trash
+        where id = #{id}
+    </delete>
 </mapper>

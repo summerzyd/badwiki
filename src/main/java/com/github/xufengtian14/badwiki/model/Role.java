@@ -9,6 +9,16 @@ public class Role {
 
     private Boolean deleted;
 
+    public Role() {
+    }
+
+    public Role(Integer id, String name, String note, Boolean deleted) {
+        this.id = id;
+        this.name = name;
+        this.note = note;
+        this.deleted = deleted;
+    }
+
     public Integer getId() {
         return id;
     }

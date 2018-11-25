@@ -15,6 +15,18 @@ public class DocTrash {
 
     private BigInteger deleteTime;
 
+    public DocTrash() {
+    }
+
+    public DocTrash(Integer id, Integer spaceId, Integer docId, String docPath, Integer deleter, BigInteger deleteTime) {
+        this.id = id;
+        this.spaceId = spaceId;
+        this.docId = docId;
+        this.docPath = docPath;
+        this.deleter = deleter;
+        this.deleteTime = deleteTime;
+    }
+
     public Integer getId() {
         return id;
     }

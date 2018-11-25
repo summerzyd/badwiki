@@ -1,13 +1,14 @@
 package com.github.xufengtian14.badwiki.mapper;
 
 import com.github.xufengtian14.badwiki.model.Doc;
+import org.apache.ibatis.annotations.Param;
 
 public interface IDocMapper {
-    Doc seleteDocById(Integer id);
+    Doc seleteDocById(@Param("id") Integer id);
 
-//    void updateDoc(Doc doc);
-//
-//    Doc insertDoc(Doc doc);
-//
-//    void deleteDocById(Integer id);
+    Integer updateDoc(Doc doc);
+
+    Integer insertDoc(Doc doc);
+
+    Integer deleteDocById(@Param("id") Integer id);
 }

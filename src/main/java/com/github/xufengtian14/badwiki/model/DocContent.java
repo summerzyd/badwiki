@@ -9,6 +9,16 @@ public class DocContent {
 
     private String docContent;
 
+    public DocContent() {
+    }
+
+    public DocContent(Integer id, Integer docId, String docName, String docContent) {
+        this.id = id;
+        this.docId = docId;
+        this.docName = docName;
+        this.docContent = docContent;
+    }
+
     public Integer getId() {
         return id;
     }

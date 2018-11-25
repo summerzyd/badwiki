@@ -9,6 +9,16 @@ public class UserRole {
 
     private Boolean deleted;
 
+    public UserRole() {
+    }
+
+    public UserRole(Integer id, Integer userId, Integer roleId, Boolean deleted) {
+        this.id = id;
+        this.userId = userId;
+        this.roleId = roleId;
+        this.deleted = deleted;
+    }
+
     public Integer getId() {
         return id;
     }

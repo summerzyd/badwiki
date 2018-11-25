@@ -9,7 +9,7 @@ public interface IUserMapper {
 
     Integer updateUserById(User user);
 
-//    User insertUser(User user);
-//
-//    void deleteUserById(Integer id);
+    Integer insertUser(User user);
+
+    Integer deleteUserById(@Param("id") Integer id);
 }

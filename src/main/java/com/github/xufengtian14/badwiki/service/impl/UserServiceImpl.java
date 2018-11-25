@@ -23,4 +23,13 @@ public class UserServiceImpl implements IUserService {
         return userMapper.updateUserById(user);
     }
 
+    @Override
+    public Integer insertUser(User user){
+        return userMapper.insertUser(user);
+    }
+
+    @Override
+    public Integer deleteUserById(Integer id){
+        return userMapper.deleteUserById(id);
+    }
 }

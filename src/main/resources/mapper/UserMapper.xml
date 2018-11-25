@@ -15,7 +15,7 @@
 
     <select id="seleteUserById" resultMap="userMap">
         SELECT * from user
-        where id = #{id};
+        where id = #{id}
     </select>
 
     <update id="updateUserById">
@@ -44,5 +44,14 @@
         </if>
         id = #{id}
         where id = #{id}
+    </update>
+
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        insert user (name, email, password, login_type_id, actived, enabled, deleted)
+        values ( #{name}, #{email}, #{password}, #{loginTypeId}, #{actived}, #{enabled}, #{deleted} )
+    </insert>
+
+    <update id="deleteUserById">
+        update user set deleted = true where id = #{id}
     </update>
 </mapper>

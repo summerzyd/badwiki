@@ -17,6 +17,20 @@ public class User {
 
     private Boolean deleted;
 
+    public User() {
+    }
+
+    public User(Integer id, String name, String email, String password, Integer loginTypeId, Boolean actived, Boolean enabled, Boolean deleted) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.loginTypeId = loginTypeId;
+        this.actived = actived;
+        this.enabled = enabled;
+        this.deleted = deleted;
+    }
+
     public Integer getId() {
         return id;
     }

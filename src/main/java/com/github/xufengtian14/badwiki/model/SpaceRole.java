@@ -11,6 +11,17 @@ public class SpaceRole {
 
     private Boolean deleted;
 
+    public SpaceRole() {
+    }
+
+    public SpaceRole(Integer id, Integer spaceId, Integer roleId, Integer spacePremId, Boolean deleted) {
+        this.id = id;
+        this.spaceId = spaceId;
+        this.roleId = roleId;
+        this.spacePremId = spacePremId;
+        this.deleted = deleted;
+    }
+
     public Integer getId() {
         return id;
     }

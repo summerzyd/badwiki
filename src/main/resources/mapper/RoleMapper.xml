@@ -11,7 +11,7 @@
 
     <select id="seleteRoleById" resultMap="roleMap">
         SELECT * from role
-        where id = #{id};
+        where id = #{id}
     </select>
 
     <update id="updateRoleById">

@@ -76,6 +76,15 @@ CREATE TABLE `login_type` (
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci COMMENT='用户登录类型表';
 INSERT `login_type`( `id`, `name`, `note`, `enabled`) values (1, 'local', '本地', 1),(2, 'ldap', 'LDAP', 0);
 
+CREATE TABLE `media` (
+                      `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '媒体资源ID',
+                      `name` varchar(128) NULL COMMENT '文件名',
+                      `path` varchar(128) NULL COMMENT '保存路径',
+                      `url` varchar(128) NULL COMMENT '访问url',
+                      `is_img` tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否是图片',
+                      PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci COMMENT='媒体资源表';
+
 CREATE TABLE `role` (
                         `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '角色ID',
                         `name` varchar(128) NULL COMMENT '角色名称',

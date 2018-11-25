@@ -9,8 +9,6 @@
         <result property="size" column="size"></result>
         <result property="parentId" column="parent_id"></result>
         <result property="hasChild" column="has_child"></result>
-        <result property="editor" column="editor"></result>
-        <result property="editTime" column="edit_time"></result>
         <result property="deleted" column="deleted"></result>
         <result property="creator" column="creator"></result>
         <result property="createTime" column="create_time"></result>
@@ -41,12 +39,6 @@
         <if test="hasChild != null">
             has_child = #{hasChild},
         </if>
-        <if test="editor != null">
-            editor = #{editor},
-        </if>
-        <if test="editTime != null">
-            edit_time = #{editTime},
-        </if>
         <if test="deleted != null">
             deleted = #{deleted},
         </if>
@@ -67,8 +59,8 @@
     </update>
 
     <insert id="insertDoc" useGeneratedKeys="true" keyProperty="id">
-        insert doc(space_id, name, size, parent_id, has_child, editor, edit_time, deleted, creator, create_time, modifier, modify_time )
-        values ( #{spaceId}, #{name}, #{size}, #{parentId}, #{hasChild}, #{editor}, #{editTime}, #{deleted}, #{creator}, #{createTime}, #{modifier}, #{modifyTime} )
+        insert doc(space_id, name, size, parent_id, has_child, deleted, creator, create_time, modifier, modify_time )
+        values ( #{spaceId}, #{name}, #{size}, #{parentId}, #{hasChild}, #{deleted}, #{creator}, #{createTime}, #{modifier}, #{modifyTime} )
     </insert>
 
     <update id="deleteDocById">

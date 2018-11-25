@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.xufengtian14.badwiki.mapper.IDocContentMapper">
+
+    <resultMap id="docContentMap" type="com.github.xufengtian14.badwiki.model.DocContent">
+        <id property="id" column="id"></id>
+        <result property="docId" column="doc_id"></result>
+        <result property="saver" column="saver"></result>
+        <result property="saveTime" column="save_time"></result>
+        <result property="docName" column="doc_name"></result>
+        <result property="docContent" column="doc_content"></result>
+    </resultMap>
+
+    <select id="seleteDocContentBufferByDocId" resultMap="docContentMap">
+        SELECT *
+        from doc_content
+        where doc_id = #{doc_id}
+    </select>
+
+    <update id="updateDocContentBufferByDocId">
+        update doc_content
+        set
+        <if test="saver != null and saver != ''">
+            saver = #{saver}
+        </if>
+        <if test="saveTime != null and saveTime != ''">
+            save_time = #{saveTime}
+        </if>
+        <if test="docName != null and docName != ''">
+            doc_name = #{docName}
+        </if>
+        <if test="docContent != null and docContent != ''">
+            doc_content = #{docContent}
+        </if>
+        doc_id = #{docId}
+        where doc_id = #{docId}
+    </update>
+
+    <insert id="insertDocContentBuffer" useGeneratedKeys="true" keyProperty="id">
+        insert doc_content ( doc_id, saver, save_time, doc_name, doc_content )
+        values ( #{docId}, #{saver}, #{saveTime} #{docName}, #{docContent} )
+    </insert>
+
+    <delete id="deleteDocContentBufferByDocId">
+        delete from doc_content
+        where doc_id = #{doc_id}
+    </delete>
+</mapper>

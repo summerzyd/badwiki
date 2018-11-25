@@ -15,10 +15,6 @@ public class Doc {
 
     private Boolean hasChild;
 
-    private Integer editor;
-
-    private BigInteger editTime;
-
     private Boolean deleted;
 
     private Integer creator;
@@ -32,15 +28,13 @@ public class Doc {
     public Doc() {
     }
 
-    public Doc(Integer id, Integer spaceId, String name, Integer size, Integer parentId, Boolean hasChild, Integer editor, BigInteger editTime, Boolean deleted, Integer creator, BigInteger createTime, Integer modifier, BigInteger modifyTime) {
+    public Doc(Integer id, Integer spaceId, String name, Integer size, Integer parentId, Boolean hasChild, Boolean deleted, Integer creator, BigInteger createTime, Integer modifier, BigInteger modifyTime) {
         this.id = id;
         this.spaceId = spaceId;
         this.name = name;
         this.size = size;
         this.parentId = parentId;
         this.hasChild = hasChild;
-        this.editor = editor;
-        this.editTime = editTime;
         this.deleted = deleted;
         this.creator = creator;
         this.createTime = createTime;
@@ -94,22 +88,6 @@ public class Doc {
 
     public void setHasChild(Boolean hasChild) {
         this.hasChild = hasChild;
-    }
-
-    public Integer getEditor() {
-        return editor;
-    }
-
-    public void setEditor(Integer editor) {
-        this.editor = editor;
-    }
-
-    public BigInteger getEditTime() {
-        return editTime;
-    }
-
-    public void setEditTime(BigInteger editeTime) {
-        this.editTime = editeTime;
     }
 
     public Boolean getDeleted() {
